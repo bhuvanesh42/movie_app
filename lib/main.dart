@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter ArCore'),
     );
   }
 }
@@ -38,9 +38,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   sphere(ArCoreController spherecontroller) {
-    final material = ArCoreMaterial(color: Colors.black);
-    final sphere = ArCoreSphere(materials: [material], radius: 1);
-    final node = ArCoreNode(shape: sphere, position: vector.Vector3(0, 0, 1));
+    final material = ArCoreMaterial(color: Colors.blue);
+    final sphere = ArCoreSphere(materials: [material], radius: 0.1);
+    final node =
+        ArCoreNode(shape: sphere, position: vector.Vector3(0, 0, -0.5));
     spherecontroller.addArCoreNode(node);
   }
 
